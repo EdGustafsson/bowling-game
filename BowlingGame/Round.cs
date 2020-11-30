@@ -6,14 +6,16 @@ namespace BowlingGame
 {
     public class Round
     {
-        static void Roll(int pins)
+
+        int score;
+        public void Roll(int pins)
         {
-           
+            score += pins;
         }
 
-        static void Score()
+        public int Score()
         {
-           
+            return score;
         }
     }
 }
