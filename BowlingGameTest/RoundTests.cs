@@ -7,7 +7,7 @@ namespace BowlingGameTest
     public class RoundTests
     {
         [TestMethod]
-        public void CanRollGutter()
+        public void Score_Roll0_Returns0()
         {
             Round a = new Round();
 
@@ -17,7 +17,7 @@ namespace BowlingGameTest
         }
 
         [TestMethod]
-        public void CanRollGutterGame()
+        public void Score_Roll0Game_Returns0()
         {
             Round a = new Round();
 

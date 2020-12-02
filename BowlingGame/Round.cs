@@ -11,7 +11,6 @@ namespace BowlingGame
 
         public void Roll(int pins)
         {
-
             rolls[currentRoll] = pins;
             currentRoll++;
         }

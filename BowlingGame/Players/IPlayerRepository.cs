@@ -8,7 +8,10 @@ namespace BowlingGame.Players
     {
 
         List<Player> GetPlayers();
+
         void AddNewPlayer(String playerName);
+
+
     }
 
 
