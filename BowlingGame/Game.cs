@@ -17,10 +17,7 @@ namespace BowlingGame
 
         public void StartGame(string player1)
         {
-           
-
             _playerRepository.AddNewPlayer(player1);
-
         }
         public void StartGame(string player1, string player2)
         {
@@ -41,6 +38,38 @@ namespace BowlingGame
             _playerRepository.AddNewPlayer(player2);
             _playerRepository.AddNewPlayer(player3);
             _playerRepository.AddNewPlayer(player4);
+        }
+
+        public void StartGame()
+        {
+            List<Player> _players = _playerRepository.GetPlayers();
+
+            Round a = new Round();
+
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+            a.Roll(2);
+
+            _players[0].Score = a.Score();
+
+            
         }
     }
 }

@@ -31,5 +31,22 @@ namespace BowlingGameTest
             Assert.AreEqual(_players.Count, 2);
         }
 
+        [TestMethod]
+        public void CanPlayOnePersonGame()
+        {
+            _playerRepository = new PlayerRepository();
+            Game a = new Game(_playerRepository);
+
+            string player1 = "Pelle";
+         
+            a.StartGame(player1);
+
+            a.StartGame();
+
+            List<Player> _players = _playerRepository.GetPlayers();
+
+            Assert.AreEqual(_players[0].Score, 40);
+        }
+
     }
 }
