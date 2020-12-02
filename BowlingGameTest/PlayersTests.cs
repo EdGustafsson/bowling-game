@@ -16,14 +16,10 @@ namespace BowlingGameTest
             
             _playerRepository.AddNewPlayer("Pelle");
 
-
             List<Player> _players = _playerRepository.GetPlayers();
 
-
             Assert.AreEqual(_players[0].Name, "Pelle");
-
         }
-
 
 
 

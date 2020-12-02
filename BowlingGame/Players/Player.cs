@@ -6,6 +6,7 @@ namespace BowlingGame.Players
 {
     public class Player
     {
+
         public Player(string name, int score)
         {     
             Name = name;
