@@ -21,8 +21,5 @@ namespace BowlingGameTest
             Assert.AreEqual(_players[0].Name, "Pelle");
         }
 
-
-
-
     }
 }

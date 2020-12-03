@@ -7,7 +7,14 @@ namespace BowlingGame
     public class Round
     {
         int[] rolls = new int[21];
-        int currentRoll;
+        public int currentRoll;
+
+        public Round(bool active)
+        {
+            Active = active;
+        }
+
+        public bool Active { get; set; }
 
         public void Roll(int pins)
         {
@@ -22,6 +29,7 @@ namespace BowlingGame
         
             for(int frame = 0; frame < 10; frame++)
             {
+
                 if (rolls[roll] == 10)
                 {
                     score += 10 + rolls[roll + 1] + rolls[roll + 2];

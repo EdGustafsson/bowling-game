@@ -21,14 +21,18 @@ namespace BowlingGame.Players
             return _players;
         }
 
-        public void AddNewPlayer(string playerName)
+        public void AddNewFirstPlayer(string playerName)
         {
-            Round NewRound = new Round();
+            Round NewRound = new Round(true);
             Player NewPlayer = new Player(playerName, NewRound);
             _players.Add(NewPlayer);
         }
-
-
+        public void AddNewPlayer(string playerName)
+        {
+            Round NewRound = new Round(false);
+            Player NewPlayer = new Player(playerName, NewRound);
+            _players.Add(NewPlayer);
+        }
 
     }
 }
