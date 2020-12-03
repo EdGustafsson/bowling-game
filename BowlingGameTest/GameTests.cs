@@ -38,19 +38,16 @@ namespace BowlingGameTest
             Game a = new Game(_playerRepository);
 
             string player1 = "Pelle";
-            Round Round1 = new Round();
 
             a.StartGame(player1);
-
-            Round1.Roll(10);
-            Round1.Roll(2);
-            Round1.Roll(2);
-
-            a.ScorePlayer(Round1);
-
+       
             List<Player> _players = _playerRepository.GetPlayers();
 
-            Assert.AreEqual(_players[0].Score, 18);
+            _players[0].Round.Roll(10);
+            _players[0].Round.Roll(2);
+            _players[0].Round.Roll(2);
+
+            Assert.AreEqual(_players[0].Round.Score(), 18);
         }
 
     }

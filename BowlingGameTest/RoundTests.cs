@@ -67,7 +67,7 @@ namespace BowlingGameTest
         }
 
         [TestMethod]
-        public void TestScore()
+        public void Score_RollFullGame_ReturnsCorrectScore()
         {
             Round a = new Round();
 

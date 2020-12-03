@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BowlingGame;
 
 namespace BowlingGame.Players
 {
@@ -22,7 +23,8 @@ namespace BowlingGame.Players
 
         public void AddNewPlayer(string playerName)
         {
-            Player NewPlayer = new Player(playerName, 0);
+            Round NewRound = new Round();
+            Player NewPlayer = new Player(playerName, NewRound);
             _players.Add(NewPlayer);
         }
 

@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BowlingGame;
 
 namespace BowlingGame.Players
 {
     public class Player
     {
 
-        public Player(string name, int score)
+        public Player(string name, Round round)
         {     
             Name = name;
-            Score = score;
+            Round = round;
         }
 
         public string Name { get; set; }
-        public int Score { get; set; }
+        public Round Round { get; set; }
     }
 }

@@ -37,37 +37,6 @@ namespace BowlingGame
             _playerRepository.AddNewPlayer(player3);
             _playerRepository.AddNewPlayer(player4);
         }
-
-        public void ScorePlayer(Round round1)
-        {
-            List<Player> _players = _playerRepository.GetPlayers();
-            _players[0].Score = round1.Score();
-        }
-
-        public void StartRound(Round round1, Round round2)
-        {
-            List<Player> _players = _playerRepository.GetPlayers();
-            _players[0].Score = round1.Score();
-            _players[1].Score = round1.Score();
-        }
-
-        public void StartRound(Round round1, Round round2, Round round3)
-        {
-            List<Player> _players = _playerRepository.GetPlayers();
-            _players[0].Score = round1.Score();
-            _players[1].Score = round1.Score();
-            _players[2].Score = round1.Score();
-        }
-
-        public void StartRound(Round round1, Round round2, Round round3, Round Round4)
-        {
-            List<Player> _players = _playerRepository.GetPlayers();
-            _players[0].Score = round1.Score();
-            _players[1].Score = round1.Score();
-            _players[2].Score = round1.Score();
-            _players[3].Score = round1.Score();
-        }
-
         public void PrintScores()
         {
         }
