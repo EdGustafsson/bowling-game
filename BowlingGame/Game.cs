@@ -13,29 +13,28 @@ namespace BowlingGame
         }
 
 
-        public string Name { get; set; }
+        // public string Name { get; set; }
 
-        public void StartGame(string player1)
+        public void StartGame(List<string> playerNames)
         {
-            _playerRepository.AddNewFirstPlayer(player1);
+            int _playerAmount = playerNames.Count;
+
+            for(int player = 0; player < _playerAmount; player++)
+            {
+                if(player == 0)
+                {
+                    _playerRepository.AddNewFirstPlayer(playerNames[player]);
+                }
+                else
+                {
+                    _playerRepository.AddNewPlayer(playerNames[player]);
+                }
+            }
         }
-        public void StartGame(string player1, string player2)
+
+        public void Roll()
         {
-            _playerRepository.AddNewFirstPlayer(player1);
-            _playerRepository.AddNewPlayer(player2);
-        }
-        public void StartGame(string player1, string player2, string player3)
-        {
-            _playerRepository.AddNewFirstPlayer(player1);
-            _playerRepository.AddNewPlayer(player2);
-            _playerRepository.AddNewPlayer(player3);
-        }
-        public void StartGame(string player1, string player2, string player3, string player4)
-        {
-            _playerRepository.AddNewFirstPlayer(player1);
-            _playerRepository.AddNewPlayer(player2);
-            _playerRepository.AddNewPlayer(player3);
-            _playerRepository.AddNewPlayer(player4);
+            
         }
     }
 }
