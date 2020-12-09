@@ -56,42 +56,52 @@ namespace BowlingGameTest
             Assert.AreEqual(_players[0].Round.Score(), 18);
         }
 
-        //[TestMethod]
-        //public void Round_Active_ReturnsCorrect()
-        //{
-        //    _playerRepository = new PlayerRepository();
-        //    Game a = new Game(_playerRepository);
+        [TestMethod]
+        public void Round_Active_ReturnsCorrect()
+        {
+            _playerRepository = new PlayerRepository();
+            Game a = new Game(_playerRepository);
 
-        //    string player1 = "Pelle";
-        //    string player2 = "Anders";
+            string player1 = "Pelle";
+            string player2 = "Anders";
 
-        //    a.StartGame(player1, player2);
+            List<string> players = new List<string>();
 
-        //    List<Player> _players = _playerRepository.GetPlayers();
+            players.Add(player1);
+            players.Add(player2);
 
-        //    bool x = true;
+            a.StartGame(players);
 
-        //    Assert.AreEqual(x, _players[0].Round.Active);
+            List<Player> _players = _playerRepository.GetPlayers();
 
-        //}
+            bool x = true;
 
-        //[TestMethod]
-        //public void Round_Active_Shift()
-        //{
-        //    _playerRepository = new PlayerRepository();
-        //    Game a = new Game(_playerRepository);
+            Assert.AreEqual(x, _players[0].Round.Active);
 
-        //    string player1 = "Pelle";
-        //    string player2 = "Anders";
+        }
 
-        //    a.StartGame(player1, player2);
+        [TestMethod]
+        public void Round_Active_Shift()
+        {
+            _playerRepository = new PlayerRepository();
+            Game a = new Game(_playerRepository);
 
-        //    List<Player> _players = _playerRepository.GetPlayers();
+            string player1 = "Pelle";
+            string player2 = "Anders";
 
-        //    bool x = true;
+            List<string> players = new List<string>();
 
-        //    Assert.AreEqual(x, _players[0].Round.Active);
+            players.Add(player1);
+            players.Add(player2);
 
-        //}
+            a.StartGame(players);
+
+            List<Player> _players = _playerRepository.GetPlayers();
+
+            bool x = false;
+
+            Assert.AreEqual(x, _players[1].Round.Active);
+
+        }
     }
 }
