@@ -9,7 +9,7 @@ namespace BowlingGameTest
         [TestMethod]
         public void Score_Roll0_Returns0()
         {
-            Round a = new Round(false);
+            Round a = new Round();
 
             a.Roll(0);
 
@@ -19,7 +19,7 @@ namespace BowlingGameTest
         [TestMethod]
         public void Score_Roll0Game_Returns0()
         {
-            Round a = new Round(false);
+            Round a = new Round();
 
             for(int i = 0; i > 20; i++)
             {
@@ -33,7 +33,7 @@ namespace BowlingGameTest
         [TestMethod]
         public void Score_RollSpare_ReturnsCorrectScore()
         {
-            Round a = new Round(false);
+            Round a = new Round();
 
             a.Roll(5);
             a.Roll(5);
@@ -51,7 +51,7 @@ namespace BowlingGameTest
         [TestMethod]
         public void Score_RollStrike_ReturnsCorrectScore()
         {
-            Round a = new Round(false);
+            Round a = new Round();
 
             a.Roll(10); 
             a.Roll(2);
@@ -69,7 +69,7 @@ namespace BowlingGameTest
         [TestMethod]
         public void Score_RollFullGame_ReturnsCorrectScore()
         {
-            Round a = new Round(false);
+            Round a = new Round();
 
             a.Roll(10);// Strike 14
             a.Roll(2);//  16

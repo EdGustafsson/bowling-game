@@ -9,7 +9,7 @@ namespace BowlingGame.Players
 
         List<Player> GetPlayers();
 
-        void AddNewFirstPlayer(String playerName);
+        //void AddNewFirstPlayer(String playerName);
         void AddNewPlayer(String playerName);
 
 

@@ -21,14 +21,9 @@ namespace BowlingGame
 
             for(int player = 0; player < _playerAmount; player++)
             {
-                if(player == 0)
-                {
-                    _playerRepository.AddNewFirstPlayer(playerNames[player]);
-                }
-                else
-                {
+               
                     _playerRepository.AddNewPlayer(playerNames[player]);
-                }
+                
             }
         }
 
