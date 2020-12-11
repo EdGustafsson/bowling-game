@@ -65,7 +65,13 @@ namespace BowlingGameTest
         //    string player1 = "Pelle";
         //    string player2 = "Anders";
 
-        //    a.StartGame(player1, player2);
+        //    List<string> players = new List<string>();
+
+        //    players.Add(player1);
+        //    players.Add(player2);
+
+        //    a.StartGame(players);
+
 
         //    List<Player> _players = _playerRepository.GetPlayers();
 

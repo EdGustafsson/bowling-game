@@ -95,5 +95,50 @@ namespace BowlingGameTest
             Assert.AreEqual(a.Score(), 71);
 
         }
+
+        [TestMethod]
+        public void Round_Strike_Frame()
+        {
+            Round a = new Round();
+
+            a.Roll(10);
+
+
+            Assert.AreEqual(a.frame, 1);
+        }
+
+        [TestMethod]
+        public void Round_OneRoll_Frame()
+        {
+            Round a = new Round();
+
+            a.Roll(5);
+
+
+            Assert.AreEqual(a.frame, 0);
+        }
+
+        [TestMethod]
+        public void Round_TwoRoll_Frame()
+        {
+            Round a = new Round();
+
+            a.Roll(5);
+            a.Roll(5);
+
+            Assert.AreEqual(a.frame, 1);
+        }
+
+        [TestMethod]
+        public void Round_TwoRollAndStrike_Frame()
+        {
+            Round a = new Round();
+
+            a.Roll(5);
+            a.Roll(5);
+            a.Roll(10);
+
+            Assert.AreEqual(a.frame, 2);
+        }
     }
 }

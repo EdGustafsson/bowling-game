@@ -8,7 +8,7 @@ namespace BowlingGame
     {
         int[] rolls = new int[21];
         public int currentRoll;
-        public int frameCount;
+        public int frame;
         bool _firstRoll = true;
 
         public void Roll(int pins)
@@ -19,18 +19,17 @@ namespace BowlingGame
 
             if (pins == 10)
             {
-                frameCount++;  
+                frame++;  
             }
             else
             {
                 if (_firstRoll)
                 {
-                    frameCount++;
                     _firstRoll = false;
                 }
                 else
                 {
-                    frameCount++;
+                    frame++;
                     _firstRoll = true;
                 }
             }
