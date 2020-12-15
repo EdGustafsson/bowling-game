@@ -12,9 +12,6 @@ namespace BowlingGame
             _playerRepository = playerRepository;
         }
 
-
-        // public string Name { get; set; }
-
         public void StartGame(List<string> playerNames)
         {
             int _playerAmount = playerNames.Count;
