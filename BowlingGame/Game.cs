@@ -23,10 +23,5 @@ namespace BowlingGame
                 
             }
         }
-
-        public void Roll()
-        {
-            
-        }
     }
 }

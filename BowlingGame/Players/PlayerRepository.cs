@@ -20,13 +20,6 @@ namespace BowlingGame.Players
         {
             return _players;
         }
-
-        //public void AddNewFirstPlayer(string playerName)
-        //{
-        //    Round NewRound = new Round();
-        //    Player NewPlayer = new Player(playerName, NewRound);
-        //    _players.Add(NewPlayer);
-        //}
         public void AddNewPlayer(string playerName)
         {
             Round NewRound = new Round();
